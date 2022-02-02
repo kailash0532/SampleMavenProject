@@ -61,5 +61,24 @@ public class NewTest {
 	  
 	  
 	  }
+	
+	 @Test
+	  public void SampleTest3() throws MalformedURLException,
+	  InterruptedException {
+	  
+	  String url="https://www.flipkart.com/"; ChromeOptions option=new
+	  ChromeOptions(); option.addArguments("--start-maximized"); String Node
+	  ="http://192.168.225.46:4444/wd/hub";
+	  
+	  driver=new RemoteWebDriver(new URL(Node),option );
+	  
+	  driver.navigate().to(url);
+	  
+	  System.out.println(driver.getCurrentUrl()); Thread.sleep(5000);
+	  
+	  driver.quit();
+	  
+	  
+	  }
 	 
 }
